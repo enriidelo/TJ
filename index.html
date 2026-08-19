@@ -1,1 +1,522 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0e1117">
+  <title>Trading Journal Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
 
+<!-- SIDEBAR (Desktop) -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1>📈 Trading Journal</h1>
+    <div class="version">v1.2.0 • <span id="data-mode">LOCALE</span></div>
+  </div>
+
+  <div class="sidebar-section">
+    <nav class="sidebar-nav">
+      <button class="sidebar-nav-item active" data-page="dashboard">
+        <span>📊</span> Dashboard
+      </button>
+      <button class="sidebar-nav-item" data-page="new-trade">
+        <span>➕</span> Nuovo Trade
+      </button>
+      <button class="sidebar-nav-item" data-page="history">
+        <span>📋</span> Storico
+      </button>
+      <button class="sidebar-nav-item" data-page="analysis">
+        <span>🔍</span> Analisi
+      </button>
+      <button class="sidebar-nav-item" data-page="settings">
+        <span>⚙️</span> Impostazioni
+      </button>
+    </nav>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Filtri Rapidi</h3>
+    <div class="sidebar-filter">
+      <select id="sidebar-asset" class="form-group input">
+        <option value="">Tutti gli Asset</option>
+      </select>
+      <select id="sidebar-strategy" class="form-group input">
+        <option value="">Tutte le Strategie</option>
+      </select>
+      <input type="date" id="sidebar-from" class="form-group input">
+      <input type="date" id="sidebar-to" class="form-group input">
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <button class="btn btn-secondary btn-sm" onclick="app.exportCSV()">📥 Esporta CSV</button>
+    <button class="btn btn-secondary btn-sm mt-1" onclick="app.loadDemo()">🎲 Demo Data</button>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+  <!-- DASHBOARD PAGE -->
+  <section id="page-dashboard" class="page">
+    <h1 class="page-title">📊 Dashboard</h1>
+
+    <div id="dashboard-empty" class="empty-state hidden">
+      <div class="icon">📈</div>
+      <h3>Benvenuto!</h3>
+      <p>Non hai ancora trade registrati.<br>Vai su "Nuovo Trade" o carica i dati demo.</p>
+      <button class="btn btn-primary mt-2" onclick="app.loadDemo()" style="max-width:200px;margin:16px auto 0;">🎲 Carica Demo</button>
+    </div>
+
+    <div id="dashboard-content">
+      <div class="metrics-grid" id="metrics-grid"></div>
+
+      <div class="desktop-grid">
+        <div class="left-col">
+          <div class="card" id="equity-card">
+            <h2 class="section-title">📈 Equity Curve</h2>
+            <div class="chart-container">
+              <canvas id="equity-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="card" id="hourly-card">
+            <h2 class="section-title">⏰ Performance Oraria</h2>
+            <div class="chart-container">
+              <canvas id="hourly-chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-col">
+          <div class="card" id="insights-card">
+            <h2 class="section-title">💡 Insight</h2>
+            <div id="insights-list"></div>
+          </div>
+
+          <div class="card" id="recent-card">
+            <h2 class="section-title">📝 Ultimi Trade</h2>
+            <div id="recent-trades"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW TRADE PAGE -->
+  <section id="page-new-trade" class="page hidden">
+    <h1 class="page-title">➕ Registra Trade</h1>
+
+    <div class="card">
+      <form id="trade-form">
+        <h3 class="subsection-title">Dati Base</h3>
+        <div class="form-grid cols-3">
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label>Ora</label>
+            <input type="time" name="time" required>
+          </div>
+          <div class="form-group">
+            <label>Asset</label>
+            <div class="select-with-add">
+              <select name="asset" id="form-asset" required></select>
+              <button type="button" class="btn-add-option" onclick="app.promptAddOption('form-asset', 'assets')" title="Aggiungi asset">+</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Direzione</label>
+            <select name="direction" required>
+              <option value="Long">Long</option>
+              <option value="Short">Short</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Strategia</label>
+            <div class="select-with-add">
+              <select name="strategy" id="form-strategy" required></select>
+              <button type="button" class="btn-add-option" onclick="app.promptAddOption('form-strategy', 'strategies')" title="Aggiungi strategia">+</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Timeframe</label>
+            <div class="select-with-add">
+              <select name="timeframe" id="form-timeframe" required></select>
+              <button type="button" class="btn-add-option" onclick="app.promptAddOption('form-timeframe', 'timeframes')" title="Aggiungi timeframe">+</button>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title mt-2">Prezzi</h3>
+        <div class="form-grid cols-2">
+          <div class="form-group">
+            <label>Prezzo Entrata</label>
+            <input type="number" name="entry_price" step="0.0001" required>
+          </div>
+          <div class="form-group">
+            <label>Prezzo Uscita (opzionale)</label>
+            <input type="number" name="exit_price" step="0.0001" value="0">
+          </div>
+          <div class="form-group">
+            <label>Stop-Loss</label>
+            <input type="number" name="stop_loss" step="0.0001">
+          </div>
+          <div class="form-group">
+            <label>Take-Profit</label>
+            <input type="number" name="take_profit" step="0.0001">
+          </div>
+          <div class="form-group">
+            <label>Lotto / Size</label>
+            <input type="number" name="lot_size" step="0.01" value="0.1" required>
+          </div>
+          <div class="form-group">
+            <label>Commissioni</label>
+            <input type="number" name="commission" step="0.5" value="5">
+          </div>
+        </div>
+
+        <h3 class="subsection-title mt-2">Note</h3>
+        <div class="form-grid">
+          <div class="form-group span-2">
+            <label>Motivazione Entrata</label>
+            <textarea name="entry_reason" rows="3" placeholder="Descrivi perché hai entrato..."></textarea>
+          </div>
+          <div class="form-group span-2">
+            <label>Motivazione Uscita</label>
+            <textarea name="exit_reason" rows="3" placeholder="Descrivi perché sei uscito..."></textarea>
+          </div>
+        </div>
+
+        <div id="custom-fields-container"></div>
+
+        <button type="submit" class="btn btn-primary mt-2">💾 Salva Trade</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- HISTORY PAGE -->
+  <section id="page-history" class="page hidden">
+    <h1 class="page-title">📋 Storico Trade</h1>
+
+    <div class="card mb-2">
+      <div class="form-grid cols-2">
+        <div class="form-group">
+          <label>Asset</label>
+          <select id="hist-asset">
+            <option value="">Tutti</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Strategia</label>
+          <select id="hist-strategy">
+            <option value="">Tutte</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Da</label>
+          <input type="date" id="hist-from">
+        </div>
+        <div class="form-group">
+          <label>A</label>
+          <input type="date" id="hist-to">
+        </div>
+      </div>
+      <button class="btn btn-secondary btn-sm mt-1" onclick="app.loadHistory()">🔍 Applica Filtri</button>
+    </div>
+
+    <div id="history-table-container" class="table-container hidden">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Asset</th>
+            <th>Dir</th>
+            <th>Strategia</th>
+            <th>P&L</th>
+            <th>R</th>
+            <th>Esito</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="history-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="history-cards" class="trade-list"></div>
+  </section>
+
+  <!-- ANALYSIS PAGE -->
+  <section id="page-analysis" class="page hidden">
+    <h1 class="page-title">🔍 Analisi</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="strategies">Strategie</button>
+      <button class="tab-btn" data-tab="hourly">Orario</button>
+      <button class="tab-btn" data-tab="distribution">Distribuzione</button>
+      <button class="tab-btn" data-tab="monthly">Mensile</button>
+    </div>
+
+    <div id="tab-strategies" class="tab-content">
+      <div class="card">
+        <h2 class="section-title">Performance per Strategia</h2>
+        <div class="chart-container">
+          <canvas id="strategy-chart"></canvas>
+        </div>
+        <div id="strategy-table"></div>
+      </div>
+    </div>
+
+    <div id="tab-hourly" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Distribuzione Oraria</h2>
+        <div class="chart-container">
+          <canvas id="analysis-hourly-chart"></canvas>
+        </div>
+        <div id="hourly-table"></div>
+      </div>
+    </div>
+
+    <div id="tab-distribution" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Distribuzione P&L</h2>
+        <div class="chart-container">
+          <canvas id="distribution-chart"></canvas>
+        </div>
+        <div class="tablet-cols-2 mt-2" id="dist-stats"></div>
+      </div>
+    </div>
+
+    <div id="tab-monthly" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Report Mensile</h2>
+        <div class="form-grid cols-2">
+          <div class="form-group">
+            <label>Anno</label>
+            <select id="month-year"></select>
+          </div>
+          <div class="form-group">
+            <label>Mese</label>
+            <select id="month-month">
+              <option value="1">Gennaio</option>
+              <option value="2">Febbraio</option>
+              <option value="3">Marzo</option>
+              <option value="4">Aprile</option>
+              <option value="5">Maggio</option>
+              <option value="6">Giugno</option>
+              <option value="7">Luglio</option>
+              <option value="8">Agosto</option>
+              <option value="9">Settembre</option>
+              <option value="10">Ottobre</option>
+              <option value="11">Novembre</option>
+              <option value="12">Dicembre</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-secondary btn-sm mt-1" onclick="app.loadMonthlyReport()">Genera Report</button>
+        <div id="monthly-report" class="mt-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS PAGE -->
+  <section id="page-settings" class="page hidden">
+    <h1 class="page-title">⚙️ Impostazioni</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="theme">🎨 Tema</button>
+      <button class="tab-btn" data-tab="fields">📝 Campi</button>
+      <button class="tab-btn" data-tab="lists">📋 Liste</button>
+      <button class="tab-btn" data-tab="data">☁️ Dati</button>
+    </div>
+
+    <div id="tab-theme" class="tab-content">
+      <div class="card">
+        <h2 class="section-title">Personalizzazione Tema</h2>
+        <div class="color-picker-row">
+          <div class="color-picker-item">
+            <input type="color" id="theme-primary" value="#8ab4f8">
+            <label>Primario</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-success" value="#81c995">
+            <label>Successo</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-danger" value="#f28b82">
+            <label>Pericolo</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-warning" value="#fdd663">
+            <label>Avviso</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-bg" value="#0e1117">
+            <label>Sfondo</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-card" value="#1a1b1e">
+            <label>Card</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-text" value="#e8eaed">
+            <label>Testo</label>
+          </div>
+          <div class="color-picker-item">
+            <input type="color" id="theme-muted" value="#9aa0a6">
+            <label>Muted</label>
+          </div>
+        </div>
+        <div class="form-group mt-2">
+          <label>Border Radius</label>
+          <input type="range" id="theme-radius" min="0" max="24" value="12">
+          <span class="range-value" id="radius-value">12px</span>
+        </div>
+        <div class="toggle-row mt-1">
+          <span>Modalità Compatta</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="theme-compact">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="btn-group mt-2">
+          <button class="btn btn-primary" onclick="app.saveTheme()">💾 Salva Tema</button>
+          <button class="btn btn-secondary" onclick="app.resetTheme()">🔄 Default</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-fields" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Campi Personalizzati</h2>
+        <div id="fields-list"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">➕ Aggiungi Campo</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>ID Campo (snake_case)</label>
+            <input type="text" id="new-field-id" placeholder="es: mio_campo">
+          </div>
+          <div class="form-group">
+            <label>Etichetta</label>
+            <input type="text" id="new-field-label" placeholder="Es: Mio Campo">
+          </div>
+          <div class="form-group">
+            <label>Tipo</label>
+            <select id="new-field-type">
+              <option value="text">Testo</option>
+              <option value="number">Numero</option>
+              <option value="select">Selezione</option>
+              <option value="slider">Slider (1-10)</option>
+            </select>
+          </div>
+          <div class="form-group" id="new-field-options-group" style="display:none;">
+            <label>Opzioni (separate da virgola)</label>
+            <input type="text" id="new-field-options" placeholder="Opzione 1, Opzione 2, Opzione 3">
+          </div>
+        </div>
+        <button class="btn btn-primary mt-1" onclick="app.addCustomField()">Aggiungi Campo</button>
+      </div>
+    </div>
+
+    <div id="tab-lists" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Asset</h2>
+        <div class="list-add-row">
+          <input type="text" id="quick-add-assets" placeholder="Nuovo asset..." class="form-group input">
+          <button class="btn btn-primary btn-sm" onclick="app.quickAddToList('assets')" style="width:auto;flex-shrink:0;">+</button>
+        </div>
+        <textarea id="list-assets" rows="6" class="form-group input" style="font-family:monospace;font-size:13px;"></textarea>
+        <button class="btn btn-primary btn-sm mt-1" onclick="app.saveList('assets')">Salva Asset</button>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Strategie</h2>
+        <div class="list-add-row">
+          <input type="text" id="quick-add-strategies" placeholder="Nuova strategia..." class="form-group input">
+          <button class="btn btn-primary btn-sm" onclick="app.quickAddToList('strategies')" style="width:auto;flex-shrink:0;">+</button>
+        </div>
+        <textarea id="list-strategies" rows="6" class="form-group input" style="font-family:monospace;font-size:13px;"></textarea>
+        <button class="btn btn-primary btn-sm mt-1" onclick="app.saveList('strategies')">Salva Strategie</button>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Timeframe</h2>
+        <div class="list-add-row">
+          <input type="text" id="quick-add-timeframes" placeholder="Nuovo timeframe..." class="form-group input">
+          <button class="btn btn-primary btn-sm" onclick="app.quickAddToList('timeframes')" style="width:auto;flex-shrink:0;">+</button>
+        </div>
+        <textarea id="list-timeframes" rows="4" class="form-group input" style="font-family:monospace;font-size:13px;"></textarea>
+        <button class="btn btn-primary btn-sm mt-1" onclick="app.saveList('timeframes')">Salva Timeframe</button>
+      </div>
+    </div>
+
+    <div id="tab-data" class="tab-content hidden">
+      <div class="card">
+        <h2 class="section-title">Gestione Dati</h2>
+        <div class="mb-2">
+          <p class="text-muted">Modalità attuale: <strong id="current-mode">LOCALE</strong></p>
+        </div>
+        <div class="mb-2">
+          <h3 class="subsection-title">🆓 Versione Gratuita (Locale)</h3>
+          <ul class="text-muted" style="font-size:13px;line-height:1.8;margin-left:16px;">
+            <li>✅ LocalStorage, zero costi</li>
+            <li>✅ Privacy totale</li>
+            <li>✅ Esportazione CSV</li>
+            <li>✅ Zero internet richiesto</li>
+          </ul>
+        </div>
+        <button class="btn btn-danger" onclick="app.confirmDeleteAll()">⚠️ Elimina TUTTI i trade</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- BOTTOM NAV (Mobile) -->
+<nav class="bottom-nav">
+  <button class="bottom-nav-item active" data-page="dashboard">
+    <span class="icon">📊</span>
+    <span>Dashboard</span>
+  </button>
+  <button class="bottom-nav-item" data-page="new-trade">
+    <span class="icon">➕</span>
+    <span>Trade</span>
+  </button>
+  <button class="bottom-nav-item" data-page="history">
+    <span class="icon">📋</span>
+    <span>Storico</span>
+  </button>
+  <button class="bottom-nav-item" data-page="analysis">
+    <span class="icon">🔍</span>
+    <span>Analisi</span>
+  </button>
+  <button class="bottom-nav-item" data-page="settings">
+    <span class="icon">⚙️</span>
+    <span>Impostazioni</span>
+  </button>
+</nav>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3 id="modal-title">Conferma</h3>
+    <p id="modal-text">Sei sicuro?</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="app.closeModal()">Annulla</button>
+      <button class="btn btn-danger" id="modal-confirm">Conferma</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
