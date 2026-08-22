@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -334,15 +334,15 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
         </button>
         <button class="nav-item" data-view="calendar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-          Calendario
+          Calendar
         </button>
         <button class="nav-item" data-view="stats">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M11 19V4M18 19v-7"/></svg>
-          Statistiche
+          Statistics
         </button>
       </div>
       <div class="nav-group">
-        <div class="nav-label">Metodo</div>
+        <div class="nav-label">Method</div>
         <button class="nav-item" data-view="plan">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5M9 13h6M9 17h6"/></svg>
           Trading Plan
@@ -353,7 +353,7 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
         </button>
         <button class="nav-item" data-view="errors">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-          Errori comuni
+          Common mistakes
         </button>
         <button class="nav-item" data-view="review">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
@@ -361,21 +361,21 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
         </button>
       </div>
       <div class="nav-group">
-        <div class="nav-label">Sistema</div>
+        <div class="nav-label">System</div>
         <button class="nav-item" data-view="settings">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1-1.6 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.5 1h.1a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
-          Impostazioni
+          Settings
         </button>
       </div>
     </nav>
     <div class="sidebar-foot">
-      <button class="icon-btn" id="themeToggle" title="Cambia tema">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       </button>
-      <button class="icon-btn" id="exportQuick" title="Esporta backup JSON">
+      <button class="icon-btn" id="exportQuick" title="Export JSON backup">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
       </button>
-      <button class="icon-btn" id="newTradeBtn2" title="Nuova operazione">
+      <button class="icon-btn" id="newTradeBtn2" title="New trade">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
       </button>
     </div>
@@ -389,13 +389,13 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
         </button>
         <div class="topbar-title">
           <h2 id="viewTitle">Dashboard</h2>
-          <div class="crumb" id="viewCrumb">Panoramica</div>
+          <div class="crumb" id="viewCrumb">Overview</div>
         </div>
       </div>
       <div class="topbar-actions">
         <button class="btn btn-primary" id="newTradeBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-          Nuova operazione
+          New trade
         </button>
       </div>
     </header>
@@ -404,15 +404,15 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view active" id="view-dashboard">
       <div class="filter-bar">
         <select id="dashPeriod">
-          <option value="7">Ultimi 7 giorni</option>
-          <option value="30" selected>Ultimi 30 giorni</option>
-          <option value="90">Ultimi 90 giorni</option>
-          <option value="365">Ultimo anno</option>
-          <option value="all">Da sempre</option>
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="365">Last year</option>
+          <option value="all">All time</option>
         </select>
         <button class="btn btn-sm" id="customizeWidgetsBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-          Personalizza widget
+          Customize widgets
         </button>
       </div>
       <div class="grid dash-grid" id="dashGrid"></div>
@@ -421,44 +421,44 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <!-- JOURNAL -->
     <section class="view" id="view-journal">
       <div class="filter-bar">
-        <input type="text" class="search" id="jSearch" placeholder="Cerca per strumento, nota, tag…">
-        <select id="jStrategy"><option value="">Tutte le strategie</option></select>
-        <select id="jMarket"><option value="">Tutti i mercati</option></select>
-        <select id="jOutcome"><option value="">Tutti gli esiti</option><option value="win">Vincenti</option><option value="loss">Perdenti</option><option value="breakeven">Breakeven</option></select>
-        <select id="jTag"><option value="">Tutti i tag</option></select>
+        <input type="text" class="search" id="jSearch" placeholder="Search by instrument, note, tag…">
+        <select id="jStrategy"><option value="">All strategies</option></select>
+        <select id="jMarket"><option value="">All markets</option></select>
+        <select id="jOutcome"><option value="">All outcomes</option><option value="win">Wins</option><option value="loss">Losses</option><option value="breakeven">Breakeven</option></select>
+        <select id="jTag"><option value="">All tags</option></select>
         <div class="seg" id="jViewToggle">
-          <button class="active" data-jv="table">Tabella</button>
-          <button data-jv="cards">Schede</button>
+          <button class="active" data-jv="table">Table</button>
+          <button data-jv="cards">Cards</button>
         </div>
       </div>
       <div id="journalTableWrap" class="table-wrap">
         <table>
           <thead><tr>
-            <th data-sort="openDateTime" class="sorted-asc">Data</th>
-            <th data-sort="instrument">Strumento</th>
+            <th data-sort="openDateTime" class="sorted-asc">Date</th>
+            <th data-sort="instrument">Instrument</th>
             <th data-sort="direction">Dir.</th>
-            <th data-sort="strategy">Strategia</th>
+            <th data-sort="strategy">Strategy</th>
             <th data-sort="pnl">P&L</th>
             <th data-sort="rr">R:R</th>
-            <th data-sort="outcome">Esito</th>
-            <th>Tag</th>
-            <th>Errori</th>
+            <th data-sort="outcome">Outcome</th>
+            <th>Tags</th>
+            <th>Mistakes</th>
           </tr></thead>
           <tbody id="journalTbody"></tbody>
         </table>
       </div>
       <div id="journalEmpty" class="empty" style="display:none;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
-        <p>Nessuna operazione trovata. Registra il tuo primo trade per iniziare a costruire lo storico.</p>
+        <p>No trades found. Log your first trade to start building your history.</p>
       </div>
     </section>
 
     <!-- CALENDAR -->
     <section class="view" id="view-calendar">
       <div class="cal-head">
-        <button class="btn btn-sm" id="calPrev">‹ Mese prec.</button>
+        <button class="btn btn-sm" id="calPrev">‹ Prev. month</button>
         <h3 id="calLabel" class="display" style="font-size:16px;"></h3>
-        <button class="btn btn-sm" id="calNext">Mese succ. ›</button>
+        <button class="btn btn-sm" id="calNext">Next month ›</button>
       </div>
       <div class="cal-grid" id="calDow"></div>
       <div class="cal-grid" id="calGrid" style="margin-top:6px;"></div>
@@ -468,15 +468,15 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view" id="view-stats">
       <div class="filter-bar">
         <select id="sPeriod">
-          <option value="30">Ultimi 30 giorni</option>
-          <option value="90" selected>Ultimi 90 giorni</option>
-          <option value="365">Ultimo anno</option>
-          <option value="all">Da sempre</option>
+          <option value="30">Last 30 days</option>
+          <option value="90" selected>Last 90 days</option>
+          <option value="365">Last year</option>
+          <option value="all">All time</option>
         </select>
-        <select id="sStrategy"><option value="">Tutte le strategie</option></select>
-        <select id="sMarket"><option value="">Tutti i mercati</option></select>
-        <select id="sTag"><option value="">Tutti i tag</option></select>
-        <button class="btn btn-sm" id="compareBtn">Confronta periodi</button>
+        <select id="sStrategy"><option value="">All strategies</option></select>
+        <select id="sMarket"><option value="">All markets</option></select>
+        <select id="sTag"><option value="">All tags</option></select>
+        <button class="btn btn-sm" id="compareBtn">Compare periods</button>
       </div>
       <div class="grid dash-grid" id="statsGrid"></div>
     </section>
@@ -485,11 +485,11 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view" id="view-plan">
       <div class="grid" style="grid-template-columns:1.6fr 1fr; gap:18px; align-items:start;">
         <div class="card">
-          <div class="card-head"><h3>Trading Plan attuale</h3><button class="btn btn-sm btn-primary" id="editPlanBtn">Modifica</button></div>
+          <div class="card-head"><h3>Current Trading Plan</h3><button class="btn btn-sm btn-primary" id="editPlanBtn">Edit</button></div>
           <div id="planView"></div>
         </div>
         <div class="card">
-          <div class="card-head"><h3>Storico versioni</h3></div>
+          <div class="card-head"><h3>Version history</h3></div>
           <div class="timeline" id="planTimeline"></div>
         </div>
       </div>
@@ -499,10 +499,10 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view" id="view-checklist">
       <div class="grid" style="grid-template-columns:1fr; max-width:640px;">
         <div class="card">
-          <div class="card-head"><h3>Voci checklist pre-trade</h3></div>
-          <p class="stat-sub" style="margin-bottom:12px;">Queste voci vengono proposte prima di ogni nuova operazione. Trascina per riordinare.</p>
+          <div class="card-head"><h3>Pre-trade checklist items</h3></div>
+          <p class="stat-sub" style="margin-bottom:12px;">These items are shown before every new trade. Drag to reorder.</p>
           <div class="list-editor" id="checklistEditor"></div>
-          <div class="add-row"><input type="text" id="newChecklistItem" placeholder="Nuova voce checklist…"><button class="btn btn-sm" id="addChecklistItem">Aggiungi</button></div>
+          <div class="add-row"><input type="text" id="newChecklistItem" placeholder="New checklist item…"><button class="btn btn-sm" id="addChecklistItem">Add</button></div>
         </div>
       </div>
     </section>
@@ -511,13 +511,13 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view" id="view-errors">
       <div class="grid" style="grid-template-columns:1.1fr 1fr; gap:18px; align-items:start;">
         <div class="card">
-          <div class="card-head"><h3>Errori ricorrenti monitorati</h3></div>
-          <p class="stat-sub" style="margin-bottom:12px;">Elenco personalizzabile. Ogni trade può essere taggato con uno o più errori commessi.</p>
+          <div class="card-head"><h3>Tracked recurring mistakes</h3></div>
+          <p class="stat-sub" style="margin-bottom:12px;">Fully customizable list. Every trade can be tagged with one or more mistakes made.</p>
           <div class="list-editor" id="errorsEditor"></div>
-          <div class="add-row"><input type="text" id="newErrorItem" placeholder="Nuovo errore da monitorare…"><button class="btn btn-sm" id="addErrorItem">Aggiungi</button></div>
+          <div class="add-row"><input type="text" id="newErrorItem" placeholder="New mistake to track…"><button class="btn btn-sm" id="addErrorItem">Add</button></div>
         </div>
         <div class="card">
-          <div class="card-head"><h3>Impatto sugli errori</h3></div>
+          <div class="card-head"><h3>Mistake impact</h3></div>
           <div class="chart-wrap tall"><canvas id="errorsChart"></canvas></div>
         </div>
       </div>
@@ -526,10 +526,10 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <!-- REVIEW -->
     <section class="view" id="view-review">
       <div class="filter-bar">
-        <div class="seg" id="reviewToggle"><button class="active" data-rv="week">Settimanale</button><button data-rv="month">Mensile</button></div>
-        <button class="btn btn-sm" id="reviewPrev">‹ Precedente</button>
+        <div class="seg" id="reviewToggle"><button class="active" data-rv="week">Weekly</button><button data-rv="month">Monthly</button></div>
+        <button class="btn btn-sm" id="reviewPrev">‹ Previous</button>
         <span id="reviewLabel" class="badge"></span>
-        <button class="btn btn-sm" id="reviewNext">Successivo ›</button>
+        <button class="btn btn-sm" id="reviewNext">Next ›</button>
       </div>
       <div id="reviewContent"></div>
     </section>
@@ -538,52 +538,52 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
     <section class="view" id="view-settings">
       <div class="grid" style="grid-template-columns:1fr 1fr; gap:18px; max-width:960px;">
         <div class="card settings-section">
-          <h3>Aspetto</h3>
-          <div class="field"><label>Tema</label>
-            <div class="seg"><button data-theme-opt="dark" class="active">Scuro</button><button data-theme-opt="light">Chiaro</button></div>
+          <h3>Appearance</h3>
+          <div class="field"><label>Theme</label>
+            <div class="seg"><button data-theme-opt="dark" class="active">Dark</button><button data-theme-opt="light">Light</button></div>
           </div>
         </div>
         <div class="card settings-section">
-          <h3>Unità di misura</h3>
-          <div class="field"><label>Valuta</label>
-            <select id="settingsCurrency"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="pts">Punti</option><option value="pips">Pip</option></select>
+          <h3>Units</h3>
+          <div class="field"><label>Currency</label>
+            <select id="settingsCurrency"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="pts">Points</option><option value="pips">Pips</option></select>
           </div>
         </div>
         <div class="card settings-section">
-          <h3>Mercati &amp; Strategie</h3>
-          <div class="field"><label>Mercati seguiti</label><div class="list-editor" id="marketsEditor"></div>
-            <div class="add-row"><input type="text" id="newMarket" placeholder="Nuovo mercato…"><button class="btn btn-sm" id="addMarket">Aggiungi</button></div>
+          <h3>Markets &amp; Strategies</h3>
+          <div class="field"><label>Markets followed</label><div class="list-editor" id="marketsEditor"></div>
+            <div class="add-row"><input type="text" id="newMarket" placeholder="New market…"><button class="btn btn-sm" id="addMarket">Add</button></div>
           </div>
-          <div class="field"><label>Strategie / Setup</label><div class="list-editor" id="strategiesEditor"></div>
-            <div class="add-row"><input type="text" id="newStrategy" placeholder="Nuova strategia…"><button class="btn btn-sm" id="addStrategy">Aggiungi</button></div>
+          <div class="field"><label>Strategies / Setups</label><div class="list-editor" id="strategiesEditor"></div>
+            <div class="add-row"><input type="text" id="newStrategy" placeholder="New strategy…"><button class="btn btn-sm" id="addStrategy">Add</button></div>
           </div>
         </div>
         <div class="card settings-section">
-          <h3>Promemoria giornaliero</h3>
+          <h3>Daily reminder</h3>
           <div class="field" style="display:flex; align-items:center; gap:10px;">
             <label class="toggle"><input type="checkbox" id="reminderToggle"><span class="track"></span><span class="thumb"></span></label>
-            <label style="margin:0; text-transform:none; font-weight:500; font-size:13px;">Attiva promemoria a fine giornata</label>
+            <label style="margin:0; text-transform:none; font-weight:500; font-size:13px;">Enable end-of-day reminder</label>
           </div>
-          <div class="field"><label>Orario</label><input type="time" id="reminderTime" value="18:30" style="max-width:140px;"></div>
+          <div class="field"><label>Time</label><input type="time" id="reminderTime" value="18:30" style="max-width:140px;"></div>
           <p class="stat-sub" id="reminderStatus"></p>
         </div>
         <div class="card settings-section">
-          <h3>Dati &amp; Backup</h3>
-          <p class="stat-sub" style="margin-bottom:10px;">Tutti i dati restano nel tuo browser (localStorage). Esporta regolarmente un backup JSON.</p>
+          <h3>Data &amp; Backup</h3>
+          <p class="stat-sub" style="margin-bottom:10px;">All data stays in your browser (localStorage). Export a JSON backup regularly.</p>
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn" id="exportJsonBtn">Esporta JSON</button>
-            <button class="btn" id="importJsonBtn">Importa JSON</button>
-            <button class="btn" id="exportCsvBtn">Esporta CSV</button>
-            <button class="btn" id="exportPdfBtn">Esporta report PDF</button>
-            <button class="btn btn-danger" id="wipeDataBtn">Cancella tutti i dati</button>
+            <button class="btn" id="exportJsonBtn">Export JSON</button>
+            <button class="btn" id="importJsonBtn">Import JSON</button>
+            <button class="btn" id="exportCsvBtn">Export CSV</button>
+            <button class="btn" id="exportPdfBtn">Export PDF report</button>
+            <button class="btn btn-danger" id="wipeDataBtn">Delete all data</button>
           </div>
           <input type="file" id="importJsonFile" accept="application/json" style="display:none;">
           <div class="storage-bar"><div class="fill" id="storageFill" style="width:0%;"></div></div>
           <p class="stat-sub" id="storageLabel"></p>
         </div>
         <div class="card settings-section">
-          <h3>Metriche preferite</h3>
-          <p class="stat-sub" style="margin-bottom:10px;">Seleziona le metriche da mostrare in evidenza sulla Dashboard.</p>
+          <h3>Favorite metrics</h3>
+          <p class="stat-sub" style="margin-bottom:10px;">Choose which metrics to feature on the Dashboard.</p>
           <div id="favMetricsEditor" style="display:flex; flex-direction:column; gap:8px;"></div>
         </div>
       </div>
@@ -595,42 +595,42 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
 <!-- TRADE MODAL -->
 <div class="modal-overlay" id="tradeModalOverlay">
   <div class="modal wide">
-    <div class="modal-head"><h3 id="tradeModalTitle">Nuova operazione</h3><button class="modal-close" id="closeTradeModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-head"><h3 id="tradeModalTitle">New trade</h3><button class="modal-close" id="closeTradeModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="modal-body">
       <div id="preTradeWarning"></div>
       <div class="form-grid" style="margin-top:10px;">
-        <div class="field"><label>Strumento</label><input type="text" id="f_instrument" placeholder="es. EURUSD, BTCUSD, AAPL"></div>
-        <div class="field"><label>Mercato</label><select id="f_market"></select></div>
-        <div class="field"><label>Direzione</label><div class="seg full"><button class="active" data-dir="long">Long</button><button data-dir="short">Short</button></div></div>
-        <div class="field"><label>Strategia / Setup</label><select id="f_strategy"></select></div>
-        <div class="field"><label>Apertura</label><input type="datetime-local" id="f_open"></div>
-        <div class="field"><label>Chiusura</label><input type="datetime-local" id="f_close"></div>
-        <div class="field"><label>Prezzo entrata</label><input type="number" step="any" id="f_entry"></div>
-        <div class="field"><label>Prezzo uscita</label><input type="number" step="any" id="f_exit"></div>
+        <div class="field"><label>Instrument</label><input type="text" id="f_instrument" placeholder="e.g. EURUSD, BTCUSD, AAPL"></div>
+        <div class="field"><label>Market</label><select id="f_market"></select></div>
+        <div class="field"><label>Direction</label><div class="seg full"><button class="active" data-dir="long">Long</button><button data-dir="short">Short</button></div></div>
+        <div class="field"><label>Strategy / Setup</label><select id="f_strategy"></select></div>
+        <div class="field"><label>Open</label><input type="datetime-local" id="f_open"></div>
+        <div class="field"><label>Close</label><input type="datetime-local" id="f_close"></div>
+        <div class="field"><label>Entry price</label><input type="number" step="any" id="f_entry"></div>
+        <div class="field"><label>Exit price</label><input type="number" step="any" id="f_exit"></div>
         <div class="field"><label>Stop loss</label><input type="number" step="any" id="f_sl"></div>
         <div class="field"><label>Take profit</label><input type="number" step="any" id="f_tp"></div>
         <div class="field"><label>Size</label><input type="number" step="any" id="f_size"></div>
-        <div class="field"><label>Commissioni</label><input type="number" step="any" id="f_comm" value="0"></div>
-        <div class="field"><label>Esito</label><select id="f_outcome"><option value="win">Win</option><option value="loss">Loss</option><option value="breakeven">Breakeven</option></select></div>
-        <div class="field"><label>P&amp;L netto</label><input type="number" step="any" id="f_pnl"></div>
-        <div class="field span2"><label>Tag (separati da virgola)</label><input type="text" id="f_tags" placeholder="es. breakout, news, overtrading"></div>
-        <div class="field span2"><label>Errori commessi</label><div id="f_errors" style="display:flex; flex-wrap:wrap; gap:6px;"></div></div>
-        <div class="field span2"><label>Note</label><textarea id="f_notes" placeholder="Contesto, motivazioni, sensazioni durante il trade…"></textarea></div>
-        <div class="field span2"><label>Screenshot grafico</label>
-          <div class="upload-drop" id="uploadDrop">Trascina un'immagine qui o clicca per selezionarla</div>
+        <div class="field"><label>Commissions</label><input type="number" step="any" id="f_comm" value="0"></div>
+        <div class="field"><label>Outcome</label><select id="f_outcome"><option value="win">Win</option><option value="loss">Loss</option><option value="breakeven">Breakeven</option></select></div>
+        <div class="field"><label>Net P&amp;L</label><input type="number" step="any" id="f_pnl"></div>
+        <div class="field span2"><label>Tags (comma separated)</label><input type="text" id="f_tags" placeholder="e.g. breakout, news, overtrading"></div>
+        <div class="field span2"><label>Mistakes made</label><div id="f_errors" style="display:flex; flex-wrap:wrap; gap:6px;"></div></div>
+        <div class="field span2"><label>Notes</label><textarea id="f_notes" placeholder="Context, reasoning, how you felt during the trade…"></textarea></div>
+        <div class="field span2"><label>Chart screenshot</label>
+          <div class="upload-drop" id="uploadDrop">Drag an image here or click to select one</div>
           <input type="file" id="f_screenshot" accept="image/*" style="display:none;">
           <img id="screenshotPreview" class="screenshot-thumb" style="display:none; margin-top:10px;">
         </div>
         <div class="field span2">
-          <label>Checklist pre-trade</label>
+          <label>Pre-trade checklist</label>
           <div id="f_checklist"></div>
         </div>
       </div>
     </div>
     <div class="modal-foot">
-      <button class="btn btn-danger" id="deleteTradeBtn" style="display:none; margin-right:auto;">Elimina</button>
-      <button class="btn" id="cancelTradeBtn">Annulla</button>
-      <button class="btn btn-primary" id="saveTradeBtn">Salva operazione</button>
+      <button class="btn btn-danger" id="deleteTradeBtn" style="display:none; margin-right:auto;">Delete</button>
+      <button class="btn" id="cancelTradeBtn">Cancel</button>
+      <button class="btn btn-primary" id="saveTradeBtn">Save trade</button>
     </div>
   </div>
 </div>
@@ -638,24 +638,24 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
 <!-- PLAN EDIT MODAL -->
 <div class="modal-overlay" id="planModalOverlay">
   <div class="modal wide">
-    <div class="modal-head"><h3>Modifica Trading Plan</h3><button class="modal-close" id="closePlanModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-head"><h3>Edit Trading Plan</h3><button class="modal-close" id="closePlanModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="modal-body">
       <div class="form-grid">
-        <div class="field span2"><label>Mercati seguiti</label><input type="text" id="p_markets" placeholder="es. Forex majors, Indici USA, BTC/ETH"></div>
-        <div class="field"><label>Orari operativi</label><input type="text" id="p_hours" placeholder="es. 9:00–11:30, 15:30–17:30"></div>
-        <div class="field"><label>Timeframe utilizzati</label><input type="text" id="p_timeframes" placeholder="es. H4 per bias, M15 per ingresso"></div>
-        <div class="field span2"><label>Regole di ingresso</label><textarea id="p_entry"></textarea></div>
-        <div class="field span2"><label>Regole di uscita</label><textarea id="p_exit"></textarea></div>
-        <div class="field"><label>Rischio massimo per trade (%)</label><input type="number" step="any" id="p_riskTrade"></div>
-        <div class="field"><label>Rischio massimo giornaliero (%)</label><input type="number" step="any" id="p_riskDay"></div>
-        <div class="field"><label>Rischio massimo settimanale (%)</label><input type="number" step="any" id="p_riskWeek"></div>
-        <div class="field"><label>R:R minimo accettato</label><input type="number" step="any" id="p_minRR"></div>
-        <div class="field span2"><label>Nota sulla modifica (perché cambia il piano)</label><input type="text" id="p_changeNote" placeholder="es. Ridotto rischio dopo drawdown di marzo"></div>
+        <div class="field span2"><label>Markets followed</label><input type="text" id="p_markets" placeholder="e.g. Forex majors, US indices, BTC/ETH"></div>
+        <div class="field"><label>Trading hours</label><input type="text" id="p_hours" placeholder="e.g. 9:00–11:30, 15:30–17:30"></div>
+        <div class="field"><label>Timeframes used</label><input type="text" id="p_timeframes" placeholder="e.g. H4 for bias, M15 for entry"></div>
+        <div class="field span2"><label>Entry rules</label><textarea id="p_entry"></textarea></div>
+        <div class="field span2"><label>Exit rules</label><textarea id="p_exit"></textarea></div>
+        <div class="field"><label>Max risk per trade (%)</label><input type="number" step="any" id="p_riskTrade"></div>
+        <div class="field"><label>Max daily risk (%)</label><input type="number" step="any" id="p_riskDay"></div>
+        <div class="field"><label>Max weekly risk (%)</label><input type="number" step="any" id="p_riskWeek"></div>
+        <div class="field"><label>Minimum accepted R:R</label><input type="number" step="any" id="p_minRR"></div>
+        <div class="field span2"><label>Change note (why the plan is changing)</label><input type="text" id="p_changeNote" placeholder="e.g. Reduced risk after March drawdown"></div>
       </div>
     </div>
     <div class="modal-foot">
-      <button class="btn" id="cancelPlanBtn">Annulla</button>
-      <button class="btn btn-primary" id="savePlanBtn">Salva nuova versione</button>
+      <button class="btn" id="cancelPlanBtn">Cancel</button>
+      <button class="btn btn-primary" id="savePlanBtn">Save new version</button>
     </div>
   </div>
 </div>
@@ -663,9 +663,9 @@ input:focus, textarea:focus, select:focus{ border-color:var(--accent); }
 <!-- WIDGETS CUSTOMIZE MODAL -->
 <div class="modal-overlay" id="widgetsModalOverlay">
   <div class="modal narrow">
-    <div class="modal-head"><h3>Personalizza dashboard</h3><button class="modal-close" id="closeWidgetsModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-head"><h3>Customize dashboard</h3><button class="modal-close" id="closeWidgetsModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="modal-body"><div id="widgetsToggleList" style="display:flex; flex-direction:column; gap:10px;"></div></div>
-    <div class="modal-foot"><button class="btn btn-primary" id="closeWidgetsModal2">Fatto</button></div>
+    <div class="modal-foot"><button class="btn btn-primary" id="closeWidgetsModal2">Done</button></div>
   </div>
 </div>
 
@@ -701,31 +701,31 @@ const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
 
 function readLS(key, fallback){
   try{ const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; }
-  catch(e){ console.error('Errore lettura storage', key, e); return fallback; }
+  catch(e){ console.error('Storage read error', key, e); return fallback; }
 }
 function writeLS(key, val){
   try{ localStorage.setItem(key, JSON.stringify(val)); return true; }
-  catch(e){ console.error('Errore scrittura storage', key, e); toast('Spazio storage esaurito: impossibile salvare.', 'error'); return false; }
+  catch(e){ console.error('Storage write error', key, e); toast('Storage space full: unable to save.', 'error'); return false; }
 }
 
 const DEFAULT_CHECKLIST = [
-  {id:uid(), text:'Trend chiaro sul timeframe operativo', active:true},
-  {id:uid(), text:'Setup completo secondo il piano', active:true},
-  {id:uid(), text:'Rischio entro il limite stabilito', active:true},
-  {id:uid(), text:'Rapporto rischio/rendimento adeguato', active:true},
-  {id:uid(), text:'Rispetto delle regole del trading plan', active:true},
+  {id:uid(), text:'Clear trend on the operating timeframe', active:true},
+  {id:uid(), text:'Setup fully matches the plan', active:true},
+  {id:uid(), text:'Risk within the set limit', active:true},
+  {id:uid(), text:'Adequate risk/reward ratio', active:true},
+  {id:uid(), text:'Trading plan rules respected', active:true},
 ];
 const DEFAULT_ERRORS = [
-  {id:uid(), text:'Operare senza un piano scritto', active:true},
-  {id:uid(), text:'Modificare le regole durante il trade', active:true},
-  {id:uid(), text:'Cambiare mercato continuamente', active:true},
-  {id:uid(), text:'Fare backtesting solo sui trade che funzionano', active:true},
-  {id:uid(), text:'Valutare il metodo dopo poche operazioni', active:true},
-  {id:uid(), text:'Confondere un buon risultato con una buona esecuzione', active:true},
-  {id:uid(), text:'Entrare in anticipo per paura di perdere il movimento (FOMO)', active:true},
-  {id:uid(), text:'Spostare lo stop loss per evitare la perdita', active:true},
+  {id:uid(), text:'Trading without a written plan', active:true},
+  {id:uid(), text:'Changing the rules mid-trade', active:true},
+  {id:uid(), text:'Constantly switching markets', active:true},
+  {id:uid(), text:'Only backtesting trades that work', active:true},
+  {id:uid(), text:'Judging the method after too few trades', active:true},
+  {id:uid(), text:'Confusing a good result with good execution', active:true},
+  {id:uid(), text:'Entering early out of fear of missing the move (FOMO)', active:true},
+  {id:uid(), text:'Moving the stop loss to avoid the loss', active:true},
 ];
-const DEFAULT_MARKETS = ['Forex','Indici','Crypto','Azioni','Commodities'];
+const DEFAULT_MARKETS = ['Forex','Indices','Crypto','Stocks','Commodities'];
 const DEFAULT_STRATEGIES = ['Breakout','Pullback','Mean Reversion','Trend Following'];
 
 const DEFAULT_PLAN = {
@@ -754,9 +754,9 @@ const DEFAULT_SETTINGS = {
 };
 
 const WIDGET_LABELS = {
-  totalTrades:'N. operazioni', winRate:'Win rate', avgRR:'R:R medio', expectancy:'Expectancy',
-  profitFactor:'Profit factor', maxDrawdown:'Drawdown massimo', avgWin:'Profitto medio', avgLoss:'Perdita media',
-  equityCurve:'Curva equity', streaks:'Streak win/loss', heatmap:'Heatmap performance', recentTrades:'Operazioni recenti'
+  totalTrades:'No. of trades', winRate:'Win rate', avgRR:'Avg. R:R', expectancy:'Expectancy',
+  profitFactor:'Profit factor', maxDrawdown:'Max drawdown', avgWin:'Avg. win', avgLoss:'Avg. loss',
+  equityCurve:'Equity curve', streaks:'Win/loss streaks', heatmap:'Performance heatmap', recentTrades:'Recent trades'
 };
 
 /* ---- state ---- */
@@ -803,14 +803,14 @@ function fmtMoney(n){
   n = Number(n)||0;
   const sym = CURRENCY_SYMBOLS[State.settings.currency] || '€';
   const sign = n>0 ? '+' : (n<0 ? '−' : '');
-  const abs = Math.abs(n).toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
+  const abs = Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2});
   if(State.settings.currency==='pts' || State.settings.currency==='pips') return `${sign}${abs} ${sym}`;
   return `${sign}${sym}${abs}`;
 }
-function fmtPct(n){ return (Number(n)||0).toLocaleString('it-IT',{minimumFractionDigits:1,maximumFractionDigits:1})+'%'; }
-function fmtNum(n,d){ return (Number(n)||0).toLocaleString('it-IT',{minimumFractionDigits:d==null?2:d, maximumFractionDigits:d==null?2:d}); }
-function fmtDate(iso){ if(!iso) return '—'; const d=new Date(iso); return d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'2-digit'})+' '+d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'}); }
-function fmtDateShort(iso){ const d=new Date(iso); return d.toLocaleDateString('it-IT',{day:'2-digit',month:'short'}); }
+function fmtPct(n){ return (Number(n)||0).toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1})+'%'; }
+function fmtNum(n,d){ return (Number(n)||0).toLocaleString('en-US',{minimumFractionDigits:d==null?2:d, maximumFractionDigits:d==null?2:d}); }
+function fmtDate(iso){ if(!iso) return '—'; const d=new Date(iso); return d.toLocaleDateString('en-US',{day:'2-digit',month:'2-digit',year:'2-digit'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'}); }
+function fmtDateShort(iso){ const d=new Date(iso); return d.toLocaleDateString('en-US',{day:'2-digit',month:'short'}); }
 
 function computeRR(t){
   if(t.rr!=null && t.rr!=='') return Number(t.rr);
@@ -959,15 +959,15 @@ const {State,$,$$,persist,toast} = L;
    NAV / ROUTER
 ========================================================= */
 const VIEW_META = {
-  dashboard:{title:'Dashboard', crumb:'Panoramica'},
-  journal:{title:'Journal', crumb:'Registro operazioni'},
-  calendar:{title:'Calendario', crumb:'Vista mensile'},
-  stats:{title:'Statistiche', crumb:'Analisi delle performance'},
-  plan:{title:'Trading Plan', crumb:'Metodo & regole'},
-  checklist:{title:'Checklist pre-trade', crumb:'Metodo & regole'},
-  errors:{title:'Errori comuni', crumb:'Auto-controllo'},
-  review:{title:'Review', crumb:'Piano vs risultati'},
-  settings:{title:'Impostazioni', crumb:'Sistema'}
+  dashboard:{title:'Dashboard', crumb:'Overview'},
+  journal:{title:'Journal', crumb:'Trade log'},
+  calendar:{title:'Calendar', crumb:'Monthly view'},
+  stats:{title:'Statistics', crumb:'Performance analysis'},
+  plan:{title:'Trading Plan', crumb:'Method & rules'},
+  checklist:{title:'Pre-trade checklist', crumb:'Method & rules'},
+  errors:{title:'Common mistakes', crumb:'Self-review'},
+  review:{title:'Review', crumb:'Plan vs. results'},
+  settings:{title:'Settings', crumb:'System'}
 };
 
 function showView(name){
@@ -1085,20 +1085,20 @@ function widgetInnerHtml(id, stats, trades){
   const head = `<div class="card-head"><h3>${WIDGET_LABELS[id]}</h3><svg class="card-drag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><circle cx="9" cy="6" r="1"/><circle cx="15" cy="6" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="18" r="1"/><circle cx="15" cy="18" r="1"/></svg></div>`;
   switch(id){
     case 'totalTrades': return head + `<div class="stat-value">${stats.n}</div><div class="stat-sub">${stats.wins} win · ${stats.losses} loss · ${stats.breakeven} be</div>`;
-    case 'winRate': return head + `<div class="stat-value">${fmtPct(stats.winRate)}</div><div class="stat-sub">su ${stats.n} operazioni</div>`;
-    case 'avgRR': return head + `<div class="stat-value">${fmtNum(stats.avgRR,2)}</div><div class="stat-sub">rapporto rischio/rendimento medio</div>`;
-    case 'expectancy': return head + `<div class="stat-value ${stats.expectancy>=0?'pos':'neg'}">${fmtMoney(stats.expectancy)}</div><div class="stat-sub">valore atteso per trade</div>`;
-    case 'profitFactor': return head + `<div class="stat-value">${isFinite(stats.profitFactor)?fmtNum(stats.profitFactor,2):'∞'}</div><div class="stat-sub">profitto lordo / perdita lorda</div>`;
-    case 'maxDrawdown': return head + `<div class="stat-value neg">${fmtMoney(-stats.maxDrawdown)}</div><div class="stat-sub">massimo ritracciamento equity</div>`;
-    case 'avgWin': return head + `<div class="stat-value pos">${fmtMoney(stats.avgWin)}</div><div class="stat-sub">media operazioni vincenti</div>`;
-    case 'avgLoss': return head + `<div class="stat-value neg">${fmtMoney(-stats.avgLoss)}</div><div class="stat-sub">media operazioni perdenti</div>`;
+    case 'winRate': return head + `<div class="stat-value">${fmtPct(stats.winRate)}</div><div class="stat-sub">out of ${stats.n} trades</div>`;
+    case 'avgRR': return head + `<div class="stat-value">${fmtNum(stats.avgRR,2)}</div><div class="stat-sub">average risk/reward ratio</div>`;
+    case 'expectancy': return head + `<div class="stat-value ${stats.expectancy>=0?'pos':'neg'}">${fmtMoney(stats.expectancy)}</div><div class="stat-sub">expected value per trade</div>`;
+    case 'profitFactor': return head + `<div class="stat-value">${isFinite(stats.profitFactor)?fmtNum(stats.profitFactor,2):'∞'}</div><div class="stat-sub">gross profit / gross loss</div>`;
+    case 'maxDrawdown': return head + `<div class="stat-value neg">${fmtMoney(-stats.maxDrawdown)}</div><div class="stat-sub">maximum equity retracement</div>`;
+    case 'avgWin': return head + `<div class="stat-value pos">${fmtMoney(stats.avgWin)}</div><div class="stat-sub">average winning trades</div>`;
+    case 'avgLoss': return head + `<div class="stat-value neg">${fmtMoney(-stats.avgLoss)}</div><div class="stat-sub">average losing trades</div>`;
     case 'equityCurve': return head + `<div class="chart-wrap tall"><canvas id="w_equityCurve"></canvas></div>`;
     case 'streaks': return head + `
       <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-        <div><div class="stat-sub">Miglior streak win</div><div class="stat-value pos" style="font-size:20px;">${stats.bestWinStreak}</div></div>
-        <div><div class="stat-sub">Peggior streak loss</div><div class="stat-value neg" style="font-size:20px;">${stats.worstLossStreak}</div></div>
+        <div><div class="stat-sub">Best win streak</div><div class="stat-value pos" style="font-size:20px;">${stats.bestWinStreak}</div></div>
+        <div><div class="stat-sub">Worst loss streak</div><div class="stat-value neg" style="font-size:20px;">${stats.worstLossStreak}</div></div>
       </div>
-      <div class="stat-sub">Streak attuale: <b style="color:${stats.liveType==='win'?'var(--win)':(stats.liveType==='loss'?'var(--loss)':'var(--text-dim)')}">${stats.liveStreak||0} ${stats.liveType==='win'?'win':(stats.liveType==='loss'?'loss':'—')}</b></div>`;
+      <div class="stat-sub">Current streak: <b style="color:${stats.liveType==='win'?'var(--win)':(stats.liveType==='loss'?'var(--loss)':'var(--text-dim)')}">${stats.liveStreak||0} ${stats.liveType==='win'?'win':(stats.liveType==='loss'?'loss':'—')}</b></div>`;
     case 'heatmap': return head + `<div id="w_heatmap"></div>`;
     case 'recentTrades': return head + renderMiniTradeTable(trades.slice(-8).reverse());
     default: return head+'';
@@ -1106,7 +1106,7 @@ function widgetInnerHtml(id, stats, trades){
 }
 
 function renderMiniTradeTable(trades){
-  if(!trades.length) return `<div class="empty" style="padding:24px;"><p>Nessuna operazione nel periodo selezionato.</p></div>`;
+  if(!trades.length) return `<div class="empty" style="padding:24px;"><p>No trades in the selected period.</p></div>`;
   let rows = trades.map(t=>`
     <tr data-id="${t.id}">
       <td>${fmtDateShort(t.openDateTime)}</td>
@@ -1144,7 +1144,7 @@ function renderWidgetCharts(stats, trades){
 
 function renderHeatmapWidget(container, trades){
   const grid = L.heatmapData(trades);
-  const days = ['Dom','Lun','Mar','Mer','Gio','Ven','Sab'];
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   let max = 0.0001;
   grid.forEach(row=>row.forEach(c=>{ max = Math.max(max, Math.abs(c.sum)); }));
   let html = `<div class="heatmap"><div></div>`;
@@ -1233,16 +1233,16 @@ const {State,$,$$,persist,toast,uid,nowIso,fmtMoney,fmtDate,escapeHtml} = L;
 function populateAllSelects(){
   const marketOpts = State.markets.map(m=>`<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`).join('');
   const stratOpts = State.strategies.map(s=>`<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
-  $('#f_market').innerHTML = `<option value="">Seleziona…</option>` + marketOpts;
-  $('#f_strategy').innerHTML = `<option value="">Seleziona…</option>` + stratOpts;
-  $('#jStrategy').innerHTML = `<option value="">Tutte le strategie</option>` + stratOpts;
-  $('#jMarket').innerHTML = `<option value="">Tutti i mercati</option>` + marketOpts;
-  $('#sStrategy').innerHTML = `<option value="">Tutte le strategie</option>` + stratOpts;
-  $('#sMarket').innerHTML = `<option value="">Tutti i mercati</option>` + marketOpts;
+  $('#f_market').innerHTML = `<option value="">Select…</option>` + marketOpts;
+  $('#f_strategy').innerHTML = `<option value="">Select…</option>` + stratOpts;
+  $('#jStrategy').innerHTML = `<option value="">All strategies</option>` + stratOpts;
+  $('#jMarket').innerHTML = `<option value="">All markets</option>` + marketOpts;
+  $('#sStrategy').innerHTML = `<option value="">All strategies</option>` + stratOpts;
+  $('#sMarket').innerHTML = `<option value="">All markets</option>` + marketOpts;
   const allTags = Array.from(new Set(State.trades.flatMap(t=>t.tags||[]))).sort();
   const tagOpts = allTags.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
-  $('#jTag').innerHTML = `<option value="">Tutti i tag</option>` + tagOpts;
-  $('#sTag').innerHTML = `<option value="">Tutti i tag</option>` + tagOpts;
+  $('#jTag').innerHTML = `<option value="">All tags</option>` + tagOpts;
+  $('#sTag').innerHTML = `<option value="">All tags</option>` + tagOpts;
 }
 L.populateAllSelects = populateAllSelects;
 
@@ -1258,7 +1258,7 @@ let currentScreenshot = null;
 function openTradeModal(tradeId){
   editingTradeId = tradeId || null;
   const t = tradeId ? State.trades.find(x=>x.id===tradeId) : null;
-  $('#tradeModalTitle').textContent = t ? 'Modifica operazione' : 'Nuova operazione';
+  $('#tradeModalTitle').textContent = t ? 'Edit trade' : 'New trade';
   $('#deleteTradeBtn').style.display = t ? 'inline-flex' : 'none';
   currentDirection = t ? t.direction : 'long';
   currentScreenshot = t ? t.screenshot : null;
@@ -1307,7 +1307,7 @@ function renderErrorChips(){
   const wrap = $('#f_errors');
   wrap.innerHTML = State.errors.filter(e=>e.active).map(e=>`
     <button type="button" class="tag-pill" data-err="${e.id}" style="cursor:pointer; border:1px solid var(--border); ${currentErrorSelections.has(e.id)?'background:var(--loss-soft); color:var(--loss); border-color:var(--loss);':''}">${escapeHtml(e.text)}</button>
-  `).join('') || `<span class="stat-sub">Nessun errore configurato — aggiungili nella sezione "Errori comuni".</span>`;
+  `).join('') || `<span class="stat-sub">No mistakes configured yet — add them in the "Common mistakes" section.</span>`;
   wrap.querySelectorAll('[data-err]').forEach(b=>b.addEventListener('click', ()=>{
     const id=b.dataset.err;
     if(currentErrorSelections.has(id)) currentErrorSelections.delete(id); else currentErrorSelections.add(id);
@@ -1322,11 +1322,11 @@ function renderChecklistInModal(){
     return `<div class="check-row ${ans==='no'?'warn':''}" data-cid="${c.id}">
       <span class="txt">${escapeHtml(c.text)}</span>
       <div class="check-yn">
-        <button type="button" class="yes ${ans==='yes'?'active':''}" data-ans="yes">Sì</button>
+        <button type="button" class="yes ${ans==='yes'?'active':''}" data-ans="yes">Yes</button>
         <button type="button" class="no ${ans==='no'?'active':''}" data-ans="no">No</button>
       </div>
     </div>`;
-  }).join('') || `<span class="stat-sub">Nessuna voce configurata — aggiungile nella sezione "Checklist".</span>`;
+  }).join('') || `<span class="stat-sub">No items configured yet — add them in the "Checklist" section.</span>`;
   wrap.querySelectorAll('.check-row').forEach(row=>{
     const cid = row.dataset.cid;
     row.querySelectorAll('[data-ans]').forEach(btn=>{
@@ -1345,7 +1345,7 @@ function updatePreTradeWarning(){
   if(noCount>0){
     box.innerHTML = `<div class="warn-banner">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="flex:0 0 auto; margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-      <div><b>${noCount} voce/i della checklist non soddisfatta/e.</b><br>Forse non è il momento migliore per entrare — rivedi il setup prima di procedere. (Puoi comunque salvare il trade.)</div>
+      <div><b>${noCount} checklist item(s) not satisfied.</b><br>This might not be the best time to enter — review the setup before proceeding. (You can still save the trade.)</div>
     </div>`;
   } else { box.innerHTML=''; }
 }
@@ -1366,7 +1366,7 @@ $('#f_screenshot').addEventListener('change', e=>{
   if(e.target.files[0]) handleScreenshotFile(e.target.files[0]);
 });
 function handleScreenshotFile(file){
-  if(!file.type.startsWith('image/')){ toast('Seleziona un file immagine valido.', 'error'); return; }
+  if(!file.type.startsWith('image/')){ toast('Please select a valid image file.', 'error'); return; }
   const reader = new FileReader();
   reader.onload = ev=>{
     const img = new Image();
@@ -1394,9 +1394,9 @@ document.addEventListener('click', e=>{
 /* save / delete */
 $('#saveTradeBtn').addEventListener('click', ()=>{
   const instrument = $('#f_instrument').value.trim();
-  if(!instrument){ toast('Inserisci lo strumento.', 'error'); return; }
+  if(!instrument){ toast('Please enter the instrument.', 'error'); return; }
   const open = $('#f_open').value;
-  if(!open){ toast('Inserisci data/ora di apertura.', 'error'); return; }
+  if(!open){ toast('Please enter the open date/time.', 'error'); return; }
 
   const checklistSnapshot = State.checklist.filter(c=>c.active).map(c=>({id:c.id, text:c.text, answer:currentChecklistAnswers[c.id]||null}));
 
@@ -1426,10 +1426,10 @@ $('#saveTradeBtn').addEventListener('click', ()=>{
   if(editingTradeId){
     const idx = State.trades.findIndex(x=>x.id===editingTradeId);
     State.trades[idx] = trade;
-    toast('Operazione aggiornata.', 'success');
+    toast('Trade updated.', 'success');
   } else {
     State.trades.push(trade);
-    toast('Operazione salvata.', 'success');
+    toast('Trade saved.', 'success');
   }
   persist('trades');
   populateAllSelects();
@@ -1439,12 +1439,12 @@ $('#saveTradeBtn').addEventListener('click', ()=>{
 
 $('#deleteTradeBtn').addEventListener('click', ()=>{
   if(!editingTradeId) return;
-  if(!confirm('Eliminare definitivamente questa operazione?')) return;
+  if(!confirm('Permanently delete this trade?')) return;
   State.trades = State.trades.filter(x=>x.id!==editingTradeId);
   persist('trades');
   closeTradeModal();
   refreshCurrentView();
-  toast('Operazione eliminata.');
+  toast('Trade deleted.');
 });
 
 function refreshCurrentView(){
@@ -1539,8 +1539,8 @@ const {State,$,$$,fmtMoney,fmtNum,fmtPct,fmtDateShort,escapeHtml} = L;
 let calCursor = new Date();
 function renderCalendar(){
   const y = calCursor.getFullYear(), m = calCursor.getMonth();
-  $('#calLabel').textContent = calCursor.toLocaleDateString('it-IT',{month:'long', year:'numeric'});
-  const dows = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
+  $('#calLabel').textContent = calCursor.toLocaleDateString('en-US',{month:'long', year:'numeric'});
+  const dows = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   $('#calDow').innerHTML = dows.map(d=>`<div class="cal-dow">${d}</div>`).join('');
 
   const firstDay = new Date(y,m,1);
@@ -1569,7 +1569,7 @@ function renderCalendar(){
     if(info) cls += info.pnl>=0 ? ' win' : ' loss';
     html += `<div class="${cls}" data-day="${d}">
       <span class="d">${d}</span>
-      ${info ? `<span class="pnl" style="color:${info.pnl>=0?'var(--win)':'var(--loss)'}">${fmtMoney(info.pnl)}</span><span class="cnt">${info.count} trade</span>` : ''}
+      ${info ? `<span class="pnl" style="color:${info.pnl>=0?'var(--win)':'var(--loss)'}">${fmtMoney(info.pnl)}</span><span class="cnt">${info.count} trade${info.count===1?'':'s'}</span>` : ''}
     </div>`;
   }
   $('#calGrid').innerHTML = html;
@@ -1598,19 +1598,19 @@ function renderStats(){
   const stats = L.computeStats(trades);
   const grid = $('#statsGrid');
   grid.innerHTML = `
-    <div class="card widget" data-w="3"><div class="card-head"><h3>N. operazioni</h3></div><div class="stat-value">${stats.n}</div></div>
+    <div class="card widget" data-w="3"><div class="card-head"><h3>No. of trades</h3></div><div class="stat-value">${stats.n}</div></div>
     <div class="card widget" data-w="3"><div class="card-head"><h3>Win rate</h3></div><div class="stat-value">${fmtPct(stats.winRate)}</div></div>
     <div class="card widget" data-w="3"><div class="card-head"><h3>Profit factor</h3></div><div class="stat-value">${isFinite(stats.profitFactor)?fmtNum(stats.profitFactor,2):'∞'}</div></div>
     <div class="card widget" data-w="3"><div class="card-head"><h3>Expectancy</h3></div><div class="stat-value ${stats.expectancy>=0?'pos':'neg'}">${fmtMoney(stats.expectancy)}</div></div>
-    <div class="card widget" data-w="3"><div class="card-head"><h3>R:R medio</h3></div><div class="stat-value">${fmtNum(stats.avgRR,2)}</div></div>
-    <div class="card widget" data-w="3"><div class="card-head"><h3>Profitto medio</h3></div><div class="stat-value pos">${fmtMoney(stats.avgWin)}</div></div>
-    <div class="card widget" data-w="3"><div class="card-head"><h3>Perdita media</h3></div><div class="stat-value neg">${fmtMoney(-stats.avgLoss)}</div></div>
-    <div class="card widget" data-w="3"><div class="card-head"><h3>Drawdown massimo</h3></div><div class="stat-value neg">${fmtMoney(-stats.maxDrawdown)}</div></div>
-    <div class="card widget" data-w="8"><div class="card-head"><h3>Curva equity</h3></div><div class="chart-wrap tall"><canvas id="s_equity"></canvas></div></div>
-    <div class="card widget" data-w="4"><div class="card-head"><h3>Distribuzione esiti</h3></div><div class="chart-wrap tall"><canvas id="s_outcomes"></canvas></div></div>
-    <div class="card widget" data-w="6"><div class="card-head"><h3>P&amp;L per strategia</h3></div><div class="chart-wrap"><canvas id="s_byStrategy"></canvas></div></div>
-    <div class="card widget" data-w="6"><div class="card-head"><h3>P&amp;L per mercato</h3></div><div class="chart-wrap"><canvas id="s_byMarket"></canvas></div></div>
-    <div class="card widget" data-w="12"><div class="card-head"><h3>Heatmap performance (giorno / ora)</h3></div><div id="s_heatmap"></div></div>
+    <div class="card widget" data-w="3"><div class="card-head"><h3>Avg. R:R</h3></div><div class="stat-value">${fmtNum(stats.avgRR,2)}</div></div>
+    <div class="card widget" data-w="3"><div class="card-head"><h3>Avg. win</h3></div><div class="stat-value pos">${fmtMoney(stats.avgWin)}</div></div>
+    <div class="card widget" data-w="3"><div class="card-head"><h3>Avg. loss</h3></div><div class="stat-value neg">${fmtMoney(-stats.avgLoss)}</div></div>
+    <div class="card widget" data-w="3"><div class="card-head"><h3>Max drawdown</h3></div><div class="stat-value neg">${fmtMoney(-stats.maxDrawdown)}</div></div>
+    <div class="card widget" data-w="8"><div class="card-head"><h3>Equity curve</h3></div><div class="chart-wrap tall"><canvas id="s_equity"></canvas></div></div>
+    <div class="card widget" data-w="4"><div class="card-head"><h3>Outcome distribution</h3></div><div class="chart-wrap tall"><canvas id="s_outcomes"></canvas></div></div>
+    <div class="card widget" data-w="6"><div class="card-head"><h3>P&amp;L by strategy</h3></div><div class="chart-wrap"><canvas id="s_byStrategy"></canvas></div></div>
+    <div class="card widget" data-w="6"><div class="card-head"><h3>P&amp;L by market</h3></div><div class="chart-wrap"><canvas id="s_byMarket"></canvas></div></div>
+    <div class="card widget" data-w="12"><div class="card-head"><h3>Performance heatmap (day / hour)</h3></div><div id="s_heatmap"></div></div>
   `;
   renderHeatmapInto($('#s_heatmap'), trades);
   if(typeof Chart === 'undefined') return;
@@ -1660,9 +1660,9 @@ $('#compareBtn').addEventListener('click', ()=>{
   const half = Math.floor(trades.length/2);
   const first = L.computeStats(trades.slice(0,half));
   const second = L.computeStats(trades.slice(half));
-  alert(`Confronto periodi (prima metà vs seconda metà dei trade filtrati)\n\n`+
-    `Prima metà — N: ${first.n}, Win rate: ${first.winRate.toFixed(1)}%, Expectancy: ${fmtMoney(first.expectancy)}\n`+
-    `Seconda metà — N: ${second.n}, Win rate: ${second.winRate.toFixed(1)}%, Expectancy: ${fmtMoney(second.expectancy)}`);
+  alert(`Period comparison (first half vs second half of filtered trades)\n\n`+
+    `First half — N: ${first.n}, Win rate: ${first.winRate.toFixed(1)}%, Expectancy: ${fmtMoney(first.expectancy)}\n`+
+    `Second half — N: ${second.n}, Win rate: ${second.winRate.toFixed(1)}%, Expectancy: ${fmtMoney(second.expectancy)}`);
 });
 
 L.renderCalendar = renderCalendar;
@@ -1682,24 +1682,24 @@ const {State,$,$$,persist,toast,uid,nowIso,escapeHtml} = L;
 function renderPlan(){
   const p = State.plan;
   $('#planView').innerHTML = `
-    <div class="field"><label>Mercati seguiti</label><div>${escapeHtml(p.markets)||'<span class="stat-sub">Non definito</span>'}</div></div>
-    <div class="field"><label>Orari operativi</label><div>${escapeHtml(p.hours)||'<span class="stat-sub">Non definito</span>'}</div></div>
-    <div class="field"><label>Timeframe utilizzati</label><div>${escapeHtml(p.timeframes)||'<span class="stat-sub">Non definito</span>'}</div></div>
-    <div class="field"><label>Regole di ingresso</label><div style="white-space:pre-wrap;">${escapeHtml(p.entry)||'<span class="stat-sub">Non definito</span>'}</div></div>
-    <div class="field"><label>Regole di uscita</label><div style="white-space:pre-wrap;">${escapeHtml(p.exit)||'<span class="stat-sub">Non definito</span>'}</div></div>
+    <div class="field"><label>Markets followed</label><div>${escapeHtml(p.markets)||'<span class="stat-sub">Not set</span>'}</div></div>
+    <div class="field"><label>Trading hours</label><div>${escapeHtml(p.hours)||'<span class="stat-sub">Not set</span>'}</div></div>
+    <div class="field"><label>Timeframes used</label><div>${escapeHtml(p.timeframes)||'<span class="stat-sub">Not set</span>'}</div></div>
+    <div class="field"><label>Entry rules</label><div style="white-space:pre-wrap;">${escapeHtml(p.entry)||'<span class="stat-sub">Not set</span>'}</div></div>
+    <div class="field"><label>Exit rules</label><div style="white-space:pre-wrap;">${escapeHtml(p.exit)||'<span class="stat-sub">Not set</span>'}</div></div>
     <div class="field" style="display:flex; gap:22px; flex-wrap:wrap;">
-      <div><label>Rischio max/trade</label><div class="num" style="font-weight:700;">${p.riskTrade||0}%</div></div>
-      <div><label>Rischio max/giorno</label><div class="num" style="font-weight:700;">${p.riskDay||0}%</div></div>
-      <div><label>Rischio max/settimana</label><div class="num" style="font-weight:700;">${p.riskWeek||0}%</div></div>
-      <div><label>R:R minimo</label><div class="num" style="font-weight:700;">${p.minRR||0}</div></div>
+      <div><label>Max risk/trade</label><div class="num" style="font-weight:700;">${p.riskTrade||0}%</div></div>
+      <div><label>Max risk/day</label><div class="num" style="font-weight:700;">${p.riskDay||0}%</div></div>
+      <div><label>Max risk/week</label><div class="num" style="font-weight:700;">${p.riskWeek||0}%</div></div>
+      <div><label>Min R:R</label><div class="num" style="font-weight:700;">${p.minRR||0}</div></div>
     </div>
   `;
   const tl = $('#planTimeline');
   const hist = State.planHistory.slice().reverse();
   if(!hist.length){
-    tl.innerHTML = `<p class="stat-sub">Nessuna modifica registrata ancora. La prima modifica al piano creerà la prima voce di storico.</p>`;
+    tl.innerHTML = `<p class="stat-sub">No changes recorded yet. The first edit to the plan will create the first history entry.</p>`;
   } else {
-    tl.innerHTML = hist.map(h=>`<div class="tl-item"><div class="tl-date">${new Date(h.date).toLocaleString('it-IT')}</div><div class="tl-note">${escapeHtml(h.changeNote||'Aggiornamento del piano')}</div></div>`).join('');
+    tl.innerHTML = hist.map(h=>`<div class="tl-item"><div class="tl-date">${new Date(h.date).toLocaleString('en-US')}</div><div class="tl-note">${escapeHtml(h.changeNote||'Plan updated')}</div></div>`).join('');
   }
 }
 
@@ -1733,7 +1733,7 @@ $('#savePlanBtn').addEventListener('click', ()=>{
   persist('plan'); persist('planHistory');
   $('#planModalOverlay').classList.remove('active');
   renderPlan();
-  toast('Trading plan aggiornato — versione salvata nello storico.', 'success');
+  toast('Trading plan updated — version saved to history.', 'success');
 });
 
 /* =========================================================
@@ -1746,7 +1746,7 @@ function renderChecklistEditor(){
       <span class="grip">⠿</span>
       <input type="text" value="${escapeHtml(c.text)}" data-field="text">
       <label class="toggle"><input type="checkbox" ${c.active?'checked':''} data-field="active"><span class="track"></span><span class="thumb"></span></label>
-      <button class="icon-btn btn-danger" data-del="${c.id}" title="Rimuovi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button>
+      <button class="icon-btn btn-danger" data-del="${c.id}" title="Remove"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button>
     </div>`).join('');
   wireListEditor(wrap, State.checklist, 'checklist');
 }
@@ -1768,7 +1768,7 @@ function renderErrorsEditor(){
       <span class="grip">⠿</span>
       <input type="text" value="${escapeHtml(e.text)}" data-field="text">
       <label class="toggle"><input type="checkbox" ${e.active?'checked':''} data-field="active"><span class="track"></span><span class="thumb"></span></label>
-      <button class="icon-btn btn-danger" data-del="${e.id}" title="Rimuovi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button>
+      <button class="icon-btn btn-danger" data-del="${e.id}" title="Remove"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button>
     </div>`).join('');
   wireListEditor(wrap, State.errors, 'errors');
   renderErrorsImpactChart();
@@ -1795,7 +1795,7 @@ function renderErrorsImpactChart(){
   L.charts['errorsChart'] = new Chart($('#errorsChart').getContext('2d'), {
     type:'bar',
     data:{ labels: rows.map(r=>r.label.length>28?r.label.slice(0,26)+'…':r.label),
-      datasets:[{ label:'P&L totale associato', data: rows.map(r=>r.pnl), backgroundColor: rows.map(r=>r.pnl>=0?c.win:c.loss) }] },
+      datasets:[{ label:'Total associated P&L', data: rows.map(r=>r.pnl), backgroundColor: rows.map(r=>r.pnl>=0?c.win:c.loss) }] },
     options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
       scales:{ x:{grid:{color:c.grid},ticks:{color:c.text,font:{family:"'JetBrains Mono'",size:10}}}, y:{grid:{display:false},ticks:{color:c.text,font:{size:10.5}}} } }
   });
@@ -1866,11 +1866,11 @@ function getRange(){
     const day = d.getDay()===0?7:d.getDay();
     const start = new Date(d); start.setDate(d.getDate()-day+1); start.setHours(0,0,0,0);
     const end = new Date(start); end.setDate(start.getDate()+6); end.setHours(23,59,59,999);
-    return {start,end,label:`Settimana del ${start.toLocaleDateString('it-IT')}`};
+    return {start,end,label:`Week of ${start.toLocaleDateString('en-US')}`};
   } else {
     const start = new Date(d.getFullYear(), d.getMonth(), 1);
     const end = new Date(d.getFullYear(), d.getMonth()+1, 0, 23,59,59,999);
-    return {start,end,label:start.toLocaleDateString('it-IT',{month:'long',year:'numeric'})};
+    return {start,end,label:start.toLocaleDateString('en-US',{month:'long',year:'numeric'})};
   }
 }
 
@@ -1886,8 +1886,8 @@ function renderReview(){
   const violations = [];
   trades.forEach(t=>{
     const rr = L.computeRR(t);
-    if(p.minRR && rr!=null && rr < p.minRR) violations.push(`${t.instrument} (${new Date(t.openDateTime).toLocaleDateString('it-IT')}): R:R ${rr.toFixed(2)} sotto il minimo di piano (${p.minRR})`);
-    if((t.checklist||[]).some(c=>c.answer==='no')) violations.push(`${t.instrument} (${new Date(t.openDateTime).toLocaleDateString('it-IT')}): checklist non completamente rispettata`);
+    if(p.minRR && rr!=null && rr < p.minRR) violations.push(`${t.instrument} (${new Date(t.openDateTime).toLocaleDateString('en-US')}): R:R ${rr.toFixed(2)} below the plan minimum (${p.minRR})`);
+    if((t.checklist||[]).some(c=>c.answer==='no')) violations.push(`${t.instrument} (${new Date(t.openDateTime).toLocaleDateString('en-US')}): checklist not fully satisfied`);
   });
   const errorCounts = {};
   trades.forEach(t=>(t.errors||[]).forEach(eid=>{ errorCounts[eid]=(errorCounts[eid]||0)+1; }));
@@ -1896,21 +1896,21 @@ function renderReview(){
 
   $('#reviewContent').innerHTML = `
     <div class="grid dash-grid">
-      <div class="card widget" data-w="3"><div class="card-head"><h3>Operazioni nel periodo</h3></div><div class="stat-value">${stats.n}</div></div>
+      <div class="card widget" data-w="3"><div class="card-head"><h3>Trades in period</h3></div><div class="stat-value">${stats.n}</div></div>
       <div class="card widget" data-w="3"><div class="card-head"><h3>Win rate</h3></div><div class="stat-value">${fmtPct(stats.winRate)}</div></div>
-      <div class="card widget" data-w="3"><div class="card-head"><h3>Risultato netto</h3></div><div class="stat-value ${stats.netPnl>=0?'pos':'neg'}">${fmtMoney(stats.netPnl)}</div></div>
-      <div class="card widget" data-w="3"><div class="card-head"><h3>R:R medio vs minimo piano</h3></div><div class="stat-value">${fmtNum(stats.avgRR,2)} <span class="stat-sub">/ ${p.minRR||'—'}</span></div></div>
+      <div class="card widget" data-w="3"><div class="card-head"><h3>Net result</h3></div><div class="stat-value ${stats.netPnl>=0?'pos':'neg'}">${fmtMoney(stats.netPnl)}</div></div>
+      <div class="card widget" data-w="3"><div class="card-head"><h3>Avg. R:R vs plan minimum</h3></div><div class="stat-value">${fmtNum(stats.avgRR,2)} <span class="stat-sub">/ ${p.minRR||'—'}</span></div></div>
       <div class="card widget" data-w="6">
-        <div class="card-head"><h3>Coerenza con il piano</h3></div>
-        ${violations.length ? `<ul style="padding-left:18px; font-size:12.5px; line-height:1.8; max-height:220px; overflow-y:auto;">${violations.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul>` : `<p class="stat-sub">Nessuna deviazione rilevata dalle regole del piano in questo periodo. ✅</p>`}
+        <div class="card-head"><h3>Consistency with the plan</h3></div>
+        ${violations.length ? `<ul style="padding-left:18px; font-size:12.5px; line-height:1.8; max-height:220px; overflow-y:auto;">${violations.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul>` : `<p class="stat-sub">No deviations from the plan's rules found in this period. ✅</p>`}
       </div>
       <div class="card widget" data-w="6">
-        <div class="card-head"><h3>Errori più frequenti nel periodo</h3></div>
-        ${topErrors.length ? topErrors.map(e=>`<div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--border-soft); font-size:12.5px;"><span>${escapeHtml(e.text)}</span><b>${e.count}×</b></div>`).join('') : `<p class="stat-sub">Nessun errore taggato in questo periodo.</p>`}
+        <div class="card-head"><h3>Most frequent mistakes in period</h3></div>
+        ${topErrors.length ? topErrors.map(e=>`<div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--border-soft); font-size:12.5px;"><span>${escapeHtml(e.text)}</span><b>${e.count}×</b></div>`).join('') : `<p class="stat-sub">No mistakes tagged in this period.</p>`}
       </div>
       <div class="card widget" data-w="12">
-        <div class="card-head"><h3>Operazioni del periodo</h3></div>
-        ${trades.length ? renderReviewTable(trades) : `<p class="stat-sub">Nessuna operazione registrata in questo periodo.</p>`}
+        <div class="card-head"><h3>Trades in this period</h3></div>
+        ${trades.length ? renderReviewTable(trades) : `<p class="stat-sub">No trades logged in this period.</p>`}
       </div>
     </div>
   `;
@@ -1918,7 +1918,7 @@ function renderReview(){
 function renderReviewTable(trades){
   return `<div class="table-wrap" style="border:none;"><table style="min-width:0;"><tbody>${trades.map(t=>`
     <tr data-id="${t.id}">
-      <td class="num">${new Date(t.openDateTime).toLocaleDateString('it-IT')}</td>
+      <td class="num">${new Date(t.openDateTime).toLocaleDateString('en-US')}</td>
       <td>${escapeHtml(t.instrument)}</td>
       <td class="${t.direction==='long'?'dir-long':'dir-short'}">${t.direction==='long'?'LONG':'SHORT'}</td>
       <td class="num" style="font-weight:700; color:${Number(t.pnl)>=0?'var(--win)':'var(--loss)'}">${fmtMoney(t.pnl)}</td>
@@ -1976,7 +1976,7 @@ $$('#view-settings [data-theme-opt]').forEach(b=>b.addEventListener('click', ()=
   State.settings.theme = b.dataset.themeOpt; persist('settings');
   $$('#view-settings [data-theme-opt]').forEach(x=>x.classList.toggle('active', x===b));
 }));
-$('#settingsCurrency').addEventListener('change', e=>{ State.settings.currency = e.target.value; persist('settings'); toast('Valuta aggiornata.'); });
+$('#settingsCurrency').addEventListener('change', e=>{ State.settings.currency = e.target.value; persist('settings'); toast('Currency updated.'); });
 
 function renderMarketsEditor(){
   const wrap = $('#marketsEditor');
@@ -2023,7 +2023,7 @@ function renderFavMetricsEditor(){
 /* ---- reminder ---- */
 function renderReminderStatus(){
   const r = State.settings.reminder;
-  $('#reminderStatus').textContent = r.enabled ? `Promemoria attivo alle ${r.time}. Verrà mostrato un avviso in-app se apri Ledger dopo quell'orario e non hai ancora registrato trade oggi.` : 'Promemoria disattivato.';
+  $('#reminderStatus').textContent = r.enabled ? `Reminder active at ${r.time}. An in-app alert will show if you open Ledger after that time and haven't logged any trades today.` : 'Reminder disabled.';
 }
 $('#reminderToggle').addEventListener('change', e=>{ State.settings.reminder.enabled = e.target.checked; persist('settings'); renderReminderStatus(); });
 $('#reminderTime').addEventListener('change', e=>{ State.settings.reminder.time = e.target.value; persist('settings'); renderReminderStatus(); });
@@ -2039,7 +2039,7 @@ function checkReminder(){
   if(r.lastShown === todayKey) return;
   const journaledToday = State.trades.some(t=> (t.openDateTime||'').slice(0,10)===todayKey );
   if(!journaledToday){
-    toast('Promemoria: non hai ancora registrato operazioni oggi nel journal.', 'error');
+    toast('Reminder: you haven\'t logged any trades today yet.', 'error');
   }
   r.lastShown = todayKey; persist('settings');
 }
@@ -2053,7 +2053,7 @@ function updateStorageMeter(){
   const pct = Math.min(100, (kb/5120)*100); // approx 5MB typical limit
   const fill = $('#storageFill'); const label = $('#storageLabel');
   if(fill){ fill.style.width = pct.toFixed(1)+'%'; fill.style.background = pct>85 ? 'var(--loss)' : 'var(--accent)'; }
-  if(label){ label.textContent = `${kb.toFixed(0)} KB utilizzati su ~5 MB stimati (limite del browser).`; }
+  if(label){ label.textContent = `${kb.toFixed(0)} KB used out of an estimated ~5 MB browser limit.`; }
 }
 L.updateStorageMeter = updateStorageMeter;
 
@@ -2076,7 +2076,7 @@ function downloadBlob(content, filename, type){
 }
 function exportJson(){
   downloadBlob(JSON.stringify(fullExportObject(), null, 2), `ledger-backup-${Date.now()}.json`, 'application/json');
-  toast('Backup JSON esportato.', 'success');
+  toast('JSON backup exported.', 'success');
 }
 L.exportJson = exportJson;
 $('#exportJsonBtn').addEventListener('click', exportJson);
@@ -2088,15 +2088,15 @@ $('#importJsonFile').addEventListener('change', e=>{
   reader.onload = ev=>{
     try{
       const data = JSON.parse(ev.target.result);
-      if(!confirm('Importare questo backup sovrascriverà tutti i dati attuali. Continuare?')) return;
+      if(!confirm('Importing this backup will overwrite all current data. Continue?')) return;
       State.trades = data.trades||[]; State.plan = data.plan||L.DEFAULT_PLAN; State.planHistory = data.planHistory||[];
       State.checklist = data.checklist||[]; State.errors = data.errors||[]; State.strategies = data.strategies||[];
       State.markets = data.markets||[]; State.settings = Object.assign({}, L.DEFAULT_SETTINGS, data.settings||{});
       persist();
-      toast('Backup importato con successo.', 'success');
+      toast('Backup imported successfully.', 'success');
       L.populateAllSelects(); document.body.setAttribute('data-theme', State.settings.theme);
       L.showView('dashboard');
-    }catch(err){ toast('File non valido.', 'error'); }
+    }catch(err){ toast('Invalid file.', 'error'); }
   };
   reader.readAsText(file);
 });
@@ -2112,7 +2112,7 @@ function exportCsv(){
     return /[,"\n]/.test(v) ? `"${v}"` : v;
   }).join(','));
   downloadBlob([header,...rows].join('\n'), `ledger-trades-${Date.now()}.csv`, 'text/csv');
-  toast('CSV esportato.', 'success');
+  toast('CSV exported.', 'success');
 }
 $('#exportCsvBtn').addEventListener('click', exportCsv);
 
@@ -2129,20 +2129,20 @@ function exportPdf(){
       .stats{display:flex; flex-wrap:wrap; gap:16px; margin-top:10px;}
       .stat{min-width:140px;} .stat b{display:block; font-size:16px;}
     </style></head><body>
-    <h1>Ledger — Report Trading Journal</h1>
-    <p>Generato il ${new Date().toLocaleString('it-IT')}</p>
-    <h2>Sintesi</h2>
+    <h1>Ledger — Trading Journal Report</h1>
+    <p>Generated on ${new Date().toLocaleString('en-US')}</p>
+    <h2>Summary</h2>
     <div class="stats">
-      <div class="stat">Operazioni<b>${stats.n}</b></div>
+      <div class="stat">Trades<b>${stats.n}</b></div>
       <div class="stat">Win rate<b>${stats.winRate.toFixed(1)}%</b></div>
       <div class="stat">Profit factor<b>${isFinite(stats.profitFactor)?stats.profitFactor.toFixed(2):'∞'}</b></div>
       <div class="stat">Expectancy<b>${L.fmtMoney(stats.expectancy)}</b></div>
-      <div class="stat">Drawdown max<b>${L.fmtMoney(-stats.maxDrawdown)}</b></div>
-      <div class="stat">Risultato netto<b>${L.fmtMoney(stats.netPnl)}</b></div>
+      <div class="stat">Max drawdown<b>${L.fmtMoney(-stats.maxDrawdown)}</b></div>
+      <div class="stat">Net result<b>${L.fmtMoney(stats.netPnl)}</b></div>
     </div>
-    <h2>Operazioni</h2>
-    <table><thead><tr><th>Data</th><th>Strumento</th><th>Dir.</th><th>Strategia</th><th>P&amp;L</th><th>Esito</th></tr></thead>
-    <tbody>${State.trades.map(t=>`<tr><td>${new Date(t.openDateTime).toLocaleDateString('it-IT')}</td><td>${t.instrument||''}</td><td>${t.direction||''}</td><td>${t.strategy||''}</td><td>${L.fmtMoney(t.pnl)}</td><td>${t.outcome||''}</td></tr>`).join('')}</tbody></table>
+    <h2>Trades</h2>
+    <table><thead><tr><th>Date</th><th>Instrument</th><th>Dir.</th><th>Strategy</th><th>P&amp;L</th><th>Outcome</th></tr></thead>
+    <tbody>${State.trades.map(t=>`<tr><td>${new Date(t.openDateTime).toLocaleDateString('en-US')}</td><td>${t.instrument||''}</td><td>${t.direction||''}</td><td>${t.strategy||''}</td><td>${L.fmtMoney(t.pnl)}</td><td>${t.outcome||''}</td></tr>`).join('')}</tbody></table>
     </body></html>`);
   w.document.close();
   setTimeout(()=> w.print(), 400);
@@ -2150,8 +2150,8 @@ function exportPdf(){
 $('#exportPdfBtn').addEventListener('click', exportPdf);
 
 $('#wipeDataBtn').addEventListener('click', ()=>{
-  if(!confirm('Questa azione cancellerà TUTTI i dati (trade, piano, impostazioni) in modo permanente. Continuare?')) return;
-  if(!confirm('Sei assolutamente sicuro? L\'operazione non è reversibile.')) return;
+  if(!confirm('This action will permanently delete ALL data (trades, plan, settings). Continue?')) return;
+  if(!confirm('Are you absolutely sure? This cannot be undone.')) return;
   Object.values(L.LS_KEYS).forEach(k=>localStorage.removeItem(k));
   location.reload();
 });
